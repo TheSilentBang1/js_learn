@@ -38,3 +38,17 @@ const myFunction = function(){
 console.log(typeof secondId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+/*
+types of memory : 
+stack : primitive variables are stores, pass by value
+heap : non primitive varaibles are stores, pass by reference
+*/
+let obj1 = {
+    name: "arpit",
+    age: 29
+}
+// let obj2 = obj1 //pass by reference
+let obj2 = {...obj1} //spread operator
+// obj2.name = "kini" //changed name in obj1 too 
+// to prevent this : use spread operator (...) :
