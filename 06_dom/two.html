@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+</head>
+<body style = "background-color: black; color : white;">
+    <div class="parent">
+        <!-- comment :)  -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+    </div>
+</body>
+
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+
+    // children method
+    // console.log(parent.children[1]) // returns html collection, child element
+    // console.log(parent.children[2].innerHTML);
+
+    // HTMLCollection -> array like : can use loops on it 
+    for (let i = 0; i < parent.children.length; i++) {
+        
+        // console.log(parent.children[i].innerHTML);
+    }
+    parent.children[2].style.color = "blue"
+    // console.log(parent.firstElementChild); // returns first child
+
+    // console.log(parent.lastElementChild); // returns last child of parent
+    
+    // we can move from child to parent too : 
+
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    
+    // console.log(dayOne.parentElement);
+
+    // console.log(dayOne.nextElementSibling); // gives next sibling of child 
+    
+    // important :
+
+    console.log("NODES : ", parent.childNodes); 
+    // returns a NodeList of all child nodes of the specified parent node. includes all child nodes not just element nodes (div, span, etc.), includes comment nodes, whitespace, etc.
+    // When we say "childNodes includes all child nodes, not just element nodes", we mean that the browser treats everything inside a DOM element as a "node", not just HTML tags.
+
+    
+    // In essence, childNodes gives a NodeList of everything inside the parent—i.e., all of its child nodes—including element nodes and text nodes (such as blank spaces, line breaks, or any text content).
+
+
+
+
+
+
+    
+</script>
+</html>

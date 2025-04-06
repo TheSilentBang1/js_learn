@@ -4,14 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color : white;
+        }
+    </style>
 </head>
-<body>
-    <div class = "bg-black">
-        <h1 class =  "heading">Learning how to use DOM</h1>
+<body class = "bg-black">
+    <div>
+        <h1 class =  "heading" id = "title">Learning how to use DOM <span style ="display: none;">span text</span></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum alias nam, vel ipsum non quos, expedita ut sit consectetur tempora excepturi accusantium rerum vitae labore reiciendis aspernatur libero asperiores! Perspiciatis.</p>
+        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem accusamus molestias facilis sapiente animi numquam. Accusamus dolores ab cupiditate perspiciatis eveniet eius rerum aspernatur inventore debitis cumque sequi, impedit necessitatibus!</h2>    
+        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt optio dignissimos iste dolores assumenda magni quos nisi aut, exercitationem culpa, cumque hic sint voluptate reiciendis et. Ipsam minus officia debitis.</h2>
+        <input type="password" class="type">
     </div>
+    <ul>
+        <li class = "list-item">one</li>
+        <li class = "list-item">two</li>
+        <li class = "list-item">three</li>
+        <li class = "list-item">four</li>
+    </ul>
 </body>
 </html>
 
 <!-- dom tree of this doc: -->
 <!-- https://excalidraw.com/#json=itwPXSrYASWaOOqvLLKFG,79GPH0r3Gxefg7kct7Ujrg --> 
+
+
+<!-- innertext vs textcontent vs innerhtml : -->
+
+<!-- innertext gives only the visible text content in the element -->
+
+<!-- textcontent gives all the text in that element even if its hidden, say using display : none  -->
+
+<!-- innerhtml : gives all html values, gives all html tags in that element  -->
+
+
+<!-- selectors : querySelector, queryselectorAll, getElementById, getElementByClassName  -->
+
+
+<!-- NodeList is different from array, cant apply map on it. NodeList and htmlcollections are similar to arrays, but not pure arrays. Check the prototypes of nodelist and htmlcoll. objects to see methods available  -->
+
+<!-- prefer using forEach on nodelists  -->
+
+
+<!-- how to iterate through htmlcollection as forEach not available ? : convert it to array using Array wrapper class -->
